@@ -15,7 +15,7 @@ r0_um = st.sidebar.slider("Nozzle Radius r₀ (μm)", 10.0, 500.0, 100.0)
 r0 = r0_um * 1e-6
 U = st.sidebar.slider("Ejection Velocity U (m/s)", 0.5, 10.0, 2.0)
 rho = st.sidebar.slider("Fluid Density ρ (kg/m³)", 800.0, 1200.0, 1000.0)
-mu = st.sidebar.slider("Dynamic Viscosity μ (Pa·s)", 0.000, 100, 0.100, format="%.3f") # 점도 슬라이더 추가!
+mu = st.sidebar.slider("Dynamic Viscosity μ (Pa·s)", 0.000, 100.0, 0.100, format="%.3f") # 점도 슬라이더 추가!
 gamma = st.sidebar.slider("Surface Tension γ (N/m)", 0.01, 0.07, 0.03)
 L_cm = st.sidebar.slider("Substrate Distance L (cm)", 1.0, 20.0, 5.0)
 L = L_cm * 1e-2
