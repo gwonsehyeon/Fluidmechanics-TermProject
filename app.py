@@ -1,255 +1,96 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": 1,
-   "id": "f8e30cd4-3016-444d-94a7-68e3f8cc907e",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "2026-05-24 17:21:18.495 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.495 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.554 \n",
-      "  \u001b[33m\u001b[1mWarning:\u001b[0m to view this Streamlit app on a browser, run it with the following\n",
-      "  command:\n",
-      "\n",
-      "    streamlit run /opt/anaconda3/lib/python3.13/site-packages/ipykernel_launcher.py [ARGUMENTS]\n",
-      "2026-05-24 17:21:18.554 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.555 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.555 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.555 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.555 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.555 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.555 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.556 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.556 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.556 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.556 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.556 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.556 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.557 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.557 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.557 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.557 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.557 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.557 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.558 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.558 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.558 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.558 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.558 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.558 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.559 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.559 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.559 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.559 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.559 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.560 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.560 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.560 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.560 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.560 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.561 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.561 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.561 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.563 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.564 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.564 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.565 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.565 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.565 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.579 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.579 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.580 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.591 Please replace `use_container_width` with `width`.\n",
-      "\n",
-      "`use_container_width` will be removed after 2025-12-31.\n",
-      "\n",
-      "For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n",
-      "2026-05-24 17:21:18.595 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.595 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.595 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.596 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.596 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.596 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.597 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.597 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.600 Please replace `use_container_width` with `width`.\n",
-      "\n",
-      "`use_container_width` will be removed after 2025-12-31.\n",
-      "\n",
-      "For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n",
-      "2026-05-24 17:21:18.600 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.601 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.601 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.601 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.602 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.602 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.602 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.602 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.602 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.602 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.603 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.603 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.603 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.603 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.603 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.603 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.604 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.604 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.604 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.604 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.604 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.604 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.605 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.605 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.605 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.605 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.606 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-05-24 17:21:18.606 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n"
-     ]
-    },
-    {
-     "data": {
-      "text/plain": [
-       "DeltaGenerator()"
-      ]
-     },
-     "execution_count": 1,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "import streamlit as st\n",
-    "import numpy as np\n",
-    "import plotly.graph_objects as go\n",
-    "from scipy.special import iv\n",
-    "\n",
-    "# 페이지 기본 설정\n",
-    "st.set_page_config(page_title=\"PR Dispensing Jet Simulator\", layout=\"wide\")\n",
-    "\n",
-    "st.title(\"💧 PR Dispensing Jet: Rayleigh-Plateau Instability Simulator\")\n",
-    "st.markdown(\"Chemical Engineering Fluid Mechanics Term Project - School of Chemical Engineering, SKKU\")\n",
-    "\n",
-    "# 왼쪽 사이드바: 사용자 입력 컨트롤 (Design Exploration Mode)\n",
-    "st.sidebar.header(\"⚙️ Process & Material Parameters\")\n",
-    "r0_um = st.sidebar.slider(\"Nozzle Radius r₀ (μm)\", 10.0, 500.0, 100.0)\n",
-    "r0 = r0_um * 1e-6\n",
-    "U = st.sidebar.slider(\"Ejection Velocity U (m/s)\", 0.5, 10.0, 2.0)\n",
-    "rho = st.sidebar.slider(\"Fluid Density ρ (kg/m³)\", 800.0, 1200.0, 1000.0)\n",
-    "gamma = st.sidebar.slider(\"Surface Tension γ (N/m)\", 0.01, 0.07, 0.03)\n",
-    "L_cm = st.sidebar.slider(\"Substrate Distance L (cm)\", 1.0, 20.0, 5.0)\n",
-    "L = L_cm * 1e-2\n",
-    "\n",
-    "eps0 = 0.01 * r0 # 초기 섭동 진폭 (초기 반경의 1%로 가정)\n",
-    "\n",
-    "# 1. 수학적 계산 코어: 분산 관계식 (Dispersion Relation)\n",
-    "x = np.linspace(0.01, 1.0, 500) # 무차원 파수 kr0 < 1 구간\n",
-    "term1 = gamma / (rho * r0**3)\n",
-    "term2 = x * (1 - x**2)\n",
-    "term3 = iv(1, x) / iv(0, x) # 제1종 변형 베셀 함수\n",
-    "alpha_sq = term1 * term2 * term3\n",
-    "alpha = np.sqrt(np.maximum(alpha_sq, 0)) # 성장률 (Growth rate)\n",
-    "\n",
-    "# 최댓값 탐색 (Peak detection)\n",
-    "max_idx = np.argmax(alpha)\n",
-    "x_max = x[max_idx]\n",
-    "alpha_max = alpha[max_idx]\n",
-    "lambda_max = 2 * np.pi * r0 / x_max\n",
-    "tb = (1 / alpha_max) * np.log(r0 / eps0)\n",
-    "zb = U * tb\n",
-    "\n",
-    "# 화면 레이아웃 분할 (2단)\n",
-    "col1, col2 = st.columns(2)\n",
-    "\n",
-    "with col1:\n",
-    "    st.subheader(\"1. Core Interactive View: Jet Profile\")\n",
-    "    z = np.linspace(0, L, 1000)\n",
-    "    k_max = x_max / r0\n",
-    "    \n",
-    "    # 붕괴 여부 판단\n",
-    "    envelope = eps0 * np.exp(alpha_max * (z / U))\n",
-    "    r_profile = r0 - envelope\n",
-    "    broken_idx = np.where(r_profile <= 0)[0]\n",
-    "    \n",
-    "    fig_jet = go.Figure()\n",
-    "    \n",
-    "    if len(broken_idx) > 0: # 기판 도달 전 붕괴 발생\n",
-    "        break_z = z[broken_idx[0]]\n",
-    "        z_intact = z[:broken_idx[0]]\n",
-    "        r_intact = r0 - eps0 * np.exp(alpha_max * (z_intact / U)) * np.cos(k_max * z_intact)\n",
-    "        \n",
-    "        # 끊어지기 전의 물줄기\n",
-    "        fig_jet.add_trace(go.Scatter(x=z_intact*100, y=r_intact*1e6, fill='tozeroy', mode='lines', line_color='blue', name='Intact PR Jet'))\n",
-    "        fig_jet.add_trace(go.Scatter(x=z_intact*100, y=-r_intact*1e6, fill='tozeroy', mode='lines', line_color='blue', showlegend=False))\n",
-    "        \n",
-    "        # 끊어진 후의 방울 (시각적 표현)\n",
-    "        z_drops = z[broken_idx[0]::50] \n",
-    "        fig_jet.add_trace(go.Scatter(x=z_drops*100, y=np.zeros_like(z_drops), mode='markers', marker=dict(size=12, color='blue'), name='Droplets'))\n",
-    "        \n",
-    "        st.error(f\"⚠️ Breakup occurs at {break_z*100:.2f} cm! The jet will NOT reach the substrate intact.\")\n",
-    "    else: # 기판까지 무사히 도달\n",
-    "        r_intact = r0 - eps0 * np.exp(alpha_max * (z / U)) * np.cos(k_max * z)\n",
-    "        fig_jet.add_trace(go.Scatter(x=z*100, y=r_intact*1e6, fill='tozeroy', mode='lines', line_color='teal', name='Intact PR Jet'))\n",
-    "        fig_jet.add_trace(go.Scatter(x=z*100, y=-r_intact*1e6, fill='tozeroy', mode='lines', line_color='teal', showlegend=False))\n",
-    "        st.success(f\"✅ The jet safely reaches the substrate at {L_cm} cm without breaking up.\")\n",
-    "\n",
-    "    # 기판(Substrate) 위치 표시 라인\n",
-    "    fig_jet.add_vline(x=L_cm, line_dash=\"dash\", line_color=\"red\", annotation_text=\"Substrate\")\n",
-    "    fig_jet.update_layout(xaxis_title=\"Distance from Nozzle z (cm)\", yaxis_title=\"Radius r (μm)\", height=400)\n",
-    "    st.plotly_chart(fig_jet, use_container_width=True)\n",
-    "\n",
-    "with col2:\n",
-    "    st.subheader(\"2. Validation View: Dispersion Relation\")\n",
-    "    fig_val = go.Figure()\n",
-    "    fig_val.add_trace(go.Scatter(x=x, y=alpha, mode='lines', line=dict(color='purple', width=3), name='Growth Rate α(x)'))\n",
-    "    fig_val.add_trace(go.Scatter(x=[x_max], y=[alpha_max], mode='markers', marker=dict(size=12, color='red'), name=f'Max: x={x_max:.3f}'))\n",
-    "    \n",
-    "    fig_val.update_layout(xaxis_title=\"Dimensionless Wavenumber (x = kr₀)\", yaxis_title=\"Growth Rate α (1/s)\", height=400)\n",
-    "    st.plotly_chart(fig_val, use_container_width=True)\n",
-    "\n",
-    "# 핵심 지표 수치형 디스플레이\n",
-    "st.markdown(\"---\")\n",
-    "st.subheader(\"📊 Key Process Metrics\")\n",
-    "m1, m2, m3, m4 = st.columns(4)\n",
-    "m1.metric(\"Max Growth Rate (α_max)\", f\"{alpha_max:.1f} s⁻¹\")\n",
-    "m2.metric(\"Most Unstable Wavelength (λ_max)\", f\"{lambda_max*1e6:.1f} μm\")\n",
-    "m3.metric(\"Breakup Time (t_b)\", f\"{tb*1000:.2f} ms\")\n",
-    "m4.metric(\"Predicted Breakup Distance (z_b)\", f\"{zb*100:.2f} cm\")\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "67678b60-4da6-4520-affc-53a5ae6439a8",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python [conda env:base] *",
-   "language": "python",
-   "name": "conda-base-py"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.13.9"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+import streamlit as st
+import numpy as np
+import plotly.graph_objects as go
+from scipy.special import iv
+
+# 페이지 기본 설정
+st.set_page_config(page_title="PR Dispensing Jet Simulator", layout="wide")
+
+st.title("💧 PR Dispensing Jet: Rayleigh-Plateau Instability Simulator")
+st.markdown("Chemical Engineering Fluid Mechanics Term Project - School of Chemical Engineering, SKKU")
+
+# 왼쪽 사이드바: 사용자 입력 컨트롤 (Design Exploration Mode)
+st.sidebar.header("⚙️ Process & Material Parameters")
+r0_um = st.sidebar.slider("Nozzle Radius r₀ (μm)", 10.0, 500.0, 100.0)
+r0 = r0_um * 1e-6
+U = st.sidebar.slider("Ejection Velocity U (m/s)", 0.5, 10.0, 2.0)
+rho = st.sidebar.slider("Fluid Density ρ (kg/m³)", 800.0, 1200.0, 1000.0)
+gamma = st.sidebar.slider("Surface Tension γ (N/m)", 0.01, 0.07, 0.03)
+L_cm = st.sidebar.slider("Substrate Distance L (cm)", 1.0, 20.0, 5.0)
+L = L_cm * 1e-2
+
+eps0 = 0.01 * r0 # 초기 섭동 진폭 (초기 반경의 1%로 가정)
+
+# 1. 수학적 계산 코어: 분산 관계식 (Dispersion Relation)
+x = np.linspace(0.01, 1.0, 500) # 무차원 파수 kr0 < 1 구간
+term1 = gamma / (rho * r0**3)
+term2 = x * (1 - x**2)
+term3 = iv(1, x) / iv(0, x) # 제1종 변형 베셀 함수
+alpha_sq = term1 * term2 * term3
+alpha = np.sqrt(np.maximum(alpha_sq, 0)) # 성장률 (Growth rate)
+
+# 최댓값 탐색 (Peak detection)
+max_idx = np.argmax(alpha)
+x_max = x[max_idx]
+alpha_max = alpha[max_idx]
+lambda_max = 2 * np.pi * r0 / x_max
+tb = (1 / alpha_max) * np.log(r0 / eps0)
+zb = U * tb
+
+# 화면 레이아웃 분할 (2단)
+col1, col2 = st.columns(2)
+
+with col1:
+    st.subheader("1. Core Interactive View: Jet Profile")
+    z = np.linspace(0, L, 1000)
+    k_max = x_max / r0
+    
+    # 붕괴 여부 판단
+    envelope = eps0 * np.exp(alpha_max * (z / U))
+    r_profile = r0 - envelope
+    broken_idx = np.where(r_profile <= 0)[0]
+    
+    fig_jet = go.Figure()
+    
+    if len(broken_idx) > 0: # 기판 도달 전 붕괴 발생
+        break_z = z[broken_idx[0]]
+        z_intact = z[:broken_idx[0]]
+        r_intact = r0 - eps0 * np.exp(alpha_max * (z_intact / U)) * np.cos(k_max * z_intact)
+        
+        # 끊어지기 전의 물줄기
+        fig_jet.add_trace(go.Scatter(x=z_intact*100, y=r_intact*1e6, fill='tozeroy', mode='lines', line_color='blue', name='Intact PR Jet'))
+        fig_jet.add_trace(go.Scatter(x=z_intact*100, y=-r_intact*1e6, fill='tozeroy', mode='lines', line_color='blue', showlegend=False))
+        
+        # 끊어진 후의 방울 (시각적 표현)
+        z_drops = z[broken_idx[0]::50] 
+        fig_jet.add_trace(go.Scatter(x=z_drops*100, y=np.zeros_like(z_drops), mode='markers', marker=dict(size=12, color='blue'), name='Droplets'))
+        
+        st.error(f"⚠️ Breakup occurs at {break_z*100:.2f} cm! The jet will NOT reach the substrate intact.")
+    else: # 기판까지 무사히 도달
+        r_intact = r0 - eps0 * np.exp(alpha_max * (z / U)) * np.cos(k_max * z)
+        fig_jet.add_trace(go.Scatter(x=z*100, y=r_intact*1e6, fill='tozeroy', mode='lines', line_color='teal', name='Intact PR Jet'))
+        fig_jet.add_trace(go.Scatter(x=z*100, y=-r_intact*1e6, fill='tozeroy', mode='lines', line_color='teal', showlegend=False))
+        st.success(f"✅ The jet safely reaches the substrate at {L_cm} cm without breaking up.")
+
+    # 기판(Substrate) 위치 표시 라인
+    fig_jet.add_vline(x=L_cm, line_dash="dash", line_color="red", annotation_text="Substrate")
+    fig_jet.update_layout(xaxis_title="Distance from Nozzle z (cm)", yaxis_title="Radius r (μm)", height=400)
+    st.plotly_chart(fig_jet, use_container_width=True)
+
+with col2:
+    st.subheader("2. Validation View: Dispersion Relation")
+    fig_val = go.Figure()
+    fig_val.add_trace(go.Scatter(x=x, y=alpha, mode='lines', line=dict(color='purple', width=3), name='Growth Rate α(x)'))
+    fig_val.add_trace(go.Scatter(x=[x_max], y=[alpha_max], mode='markers', marker=dict(size=12, color='red'), name=f'Max: x={x_max:.3f}'))
+    
+    fig_val.update_layout(xaxis_title="Dimensionless Wavenumber (x = kr₀)", yaxis_title="Growth Rate α (1/s)", height=400)
+    st.plotly_chart(fig_val, use_container_width=True)
+
+# 핵심 지표 수치형 디스플레이
+st.markdown("---")
+st.subheader("📊 Key Process Metrics")
+m1, m2, m3, m4 = st.columns(4)
+m1.metric("Max Growth Rate (α_max)", f"{alpha_max:.1f} s⁻¹")
+m2.metric("Most Unstable Wavelength (λ_max)", f"{lambda_max*1e6:.1f} μm")
+m3.metric("Breakup Time (t_b)", f"{tb*1000:.2f} ms")
+m4.metric("Predicted Breakup Distance (z_b)", f"{zb*100:.2f} cm")
