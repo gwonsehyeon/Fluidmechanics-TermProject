@@ -15,19 +15,25 @@ r0_um = st.sidebar.slider("Nozzle Radius r₀ (μm)", 10.0, 500.0, 100.0)
 r0 = r0_um * 1e-6
 U = st.sidebar.slider("Ejection Velocity U (m/s)", 0.5, 10.0, 2.0)
 rho = st.sidebar.slider("Fluid Density ρ (kg/m³)", 800.0, 1200.0, 1000.0)
+mu = st.sidebar.slider("Dynamic Viscosity μ (Pa·s)", 0.000, 0.500, 0.010, format="%.3f") # 점도 슬라이더 추가!
 gamma = st.sidebar.slider("Surface Tension γ (N/m)", 0.01, 0.07, 0.03)
 L_cm = st.sidebar.slider("Substrate Distance L (cm)", 1.0, 20.0, 5.0)
 L = L_cm * 1e-2
 
 eps0 = 0.01 * r0 # 초기 섭동 진폭 (초기 반경의 1%로 가정)
 
-# 1. 수학적 계산 코어: 분산 관계식 (Dispersion Relation)
+# 1. 수학적 계산 코어: 점성이 포함된 분산 관계식 (Weber's Viscous Approximation)
 x = np.linspace(0.01, 1.0, 500) # 무차원 파수 kr0 < 1 구간
-term1 = gamma / (rho * r0**3)
-term2 = x * (1 - x**2)
-term3 = iv(1, x) / iv(0, x) # 제1종 변형 베셀 함수
-alpha_sq = term1 * term2 * term3
-alpha = np.sqrt(np.maximum(alpha_sq, 0)) # 성장률 (Growth rate)
+
+# 1) 이상유체(Inviscid) 기준 성장률 제곱항 (Rayleigh Limit)
+omega_0_sq = (gamma / (rho * r0**3)) * (x * iv(1, x) / iv(0, x)) * (1 - x**2)
+omega_0_sq = np.maximum(omega_0_sq, 0)
+
+# 2) 점성 감쇠항 (Viscous Damping Term)
+viscous_damping = (3 * mu * x**2) / (rho * r0**2)
+
+# 3) 최종 점성 성장률 α (근의 공식 적용)
+alpha = 0.5 * (-viscous_damping + np.sqrt(viscous_damping**2 + 4 * omega_0_sq))
 
 # 최댓값 탐색 (Peak detection)
 max_idx = np.argmax(alpha)
@@ -75,7 +81,7 @@ with col1:
     # 기판(Substrate) 위치 표시 라인
     fig_jet.add_vline(x=L_cm, line_dash="dash", line_color="red", annotation_text="Substrate")
     fig_jet.update_layout(xaxis_title="Distance from Nozzle z (cm)", yaxis_title="Radius r (μm)", height=400)
-    st.plotly_chart(fig_jet, use_container_width=True)
+    st.plotly_chart(fig_jet, width="stretch")
 
 with col2:
     st.subheader("2. Validation View: Dispersion Relation")
@@ -84,7 +90,7 @@ with col2:
     fig_val.add_trace(go.Scatter(x=[x_max], y=[alpha_max], mode='markers', marker=dict(size=12, color='red'), name=f'Max: x={x_max:.3f}'))
     
     fig_val.update_layout(xaxis_title="Dimensionless Wavenumber (x = kr₀)", yaxis_title="Growth Rate α (1/s)", height=400)
-    st.plotly_chart(fig_val, use_container_width=True)
+    st.plotly_chart(fig_val, width="stretch")
 
 # 핵심 지표 수치형 디스플레이
 st.markdown("---")
