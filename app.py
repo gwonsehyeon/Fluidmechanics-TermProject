@@ -11,7 +11,7 @@ st.markdown("Chemical Engineering Fluid Mechanics Term Project - School of Chemi
 
 
 st.sidebar.header("⚙️ Process & Material Parameters")
-r0_um = st.sidebar.slider("Nozzle Radius r₀ (μm)", 10.0, 100.0, 100.0)
+r0_um = st.sidebar.slider("Nozzle Radius r₀ (μm)", 10.0, 500.0, 100.0)
 r0 = r0_um * 1e-6
 U = st.sidebar.slider("Ejection Velocity U (m/s)", 0.5, 10.0, 2.0)
 rho = st.sidebar.slider("Fluid Density ρ (kg/m³)", 800.0, 1200.0, 1000.0)
